@@ -1,4 +1,4 @@
-import {Environment, Float, PresentationControls, useGLTF} from '@react-three/drei';
+import {ContactShadows, Environment, Float, PresentationControls, useGLTF} from '@react-three/drei';
 
 export default function Experience() {
   const computer = new useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf')
@@ -22,5 +22,12 @@ export default function Experience() {
         />
       </Float>
     </PresentationControls>
-    </>
+
+    <ContactShadows
+      position-y={ - 1.4 }
+      opacity={ 0.4 }
+      scale={ 5 }
+      blur={ 2.4 }
+    />
+  </>
 }

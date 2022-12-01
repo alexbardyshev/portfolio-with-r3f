@@ -1,4 +1,4 @@
-import {ContactShadows, Environment, Float, PresentationControls, useGLTF} from '@react-three/drei';
+import {ContactShadows, Environment, Float, Html, PresentationControls, useGLTF} from '@react-three/drei';
 
 export default function Experience() {
   const computer = new useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf')
@@ -19,7 +19,17 @@ export default function Experience() {
         <primitive
           object={ computer.scene }
           position-y={ -1.2 }
-        />
+        >
+          <Html
+            transform
+            wrapperClass="htmlScreen"
+            distanceFactor={ 1.17 }
+            position={[ 0, 1.56, -1.4 ]}
+            rotation-x={ -0.256 }
+          >
+            <iframe src="http://oleksii.dev" />
+          </Html>
+        </primitive>
       </Float>
     </PresentationControls>
 

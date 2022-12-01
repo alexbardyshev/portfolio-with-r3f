@@ -1,11 +1,11 @@
-import {ContactShadows, Environment, Float, Html, PresentationControls, useGLTF} from '@react-three/drei';
+import {ContactShadows, Environment, Float, Html, PresentationControls, Text, useGLTF} from '@react-three/drei';
 
 export default function Experience() {
   const computer = new useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf')
   console.log(computer)
 
   return <>
-    <Environment preset="city" background />
+    <Environment preset="city" />
     <color args={ [ '#695b5b' ] } attach="background" />
     <PresentationControls
       global
@@ -30,6 +30,15 @@ export default function Experience() {
             <iframe src="http://oleksii.dev" />
           </Html>
         </primitive>
+        <Text
+          font="./bangers-v20-latin-regular.woff"
+          fontSize={ 1 }
+          position={ [ 3, 0.75, 0.75 ] }
+          rotation-y={ -1.25 }
+          maxWidth={ 2 }
+          textAlign="center"
+        >
+          OLEKSII.DEV</Text>
       </Float>
     </PresentationControls>
 

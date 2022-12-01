@@ -1,16 +1,20 @@
-import { OrbitControls } from '@react-three/drei'
+import {OrbitControls, useGLTF} from '@react-three/drei';
 
-export default function Experience()
-{
-    return <>
-        <color args={ [ '#695b5b' ] } attach="background" />
+export default function Experience() {
+  const computer = new useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf')
+  console.log(computer)
 
-        <OrbitControls makeDefault />
+  return <>
+    <color args={ [ '#695b5b' ] } attach="background" />
 
-        <mesh>
-            <boxGeometry />
-            <meshNormalMaterial />
-        </mesh>
+    <OrbitControls makeDefault />
+
+    <mesh>
+      <boxGeometry />
+      <meshNormalMaterial />
+    </mesh>
+
+    <primitive object={ computer.scene } />
 
     </>
 }
